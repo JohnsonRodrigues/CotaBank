@@ -4,9 +4,9 @@ namespace SpeedApps\CotaBank;
 
 class CotaBank
 {
-    private Connection $connection;
-    private Charge $charge;
-    private Reversal $reversal;
+    private  $connection;
+    private  $charge;
+    private  $reversal;
 
     public function __construct(string $user, string $password, string $environment)
     {
@@ -15,12 +15,12 @@ class CotaBank
         $this->reversal = new Reversal($this->connection);
     }
 
-    public function getCharge(): Charge
+    public function getCharge()
     {
         return $this->charge;
     }
 
-    public function getReversal(): Reversal
+    public function getReversal()
     {
         return $this->reversal;
     }
